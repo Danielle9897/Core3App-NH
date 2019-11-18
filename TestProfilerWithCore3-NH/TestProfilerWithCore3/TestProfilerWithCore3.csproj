@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.2.6" />
+    <PackageReference Include="NHibernateProfiler" Version="5.0.5041" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0-preview2.19523.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ModelNH\Blog.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\Blog.hbm.xml" />
+    <None Remove="ModelNH\Category.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\Category.hbm.xml" />
+    <None Remove="ModelNH\Comment.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\Comment.hbm.xml" />
+    <None Remove="ModelNH\Post.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\Post.hbm.xml" />
+    <None Remove="ModelNH\ReadOnlyBlog.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\ReadOnlyBlog.hbm.xml" />
+    <None Remove="ModelNH\Tag.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\Tag.hbm.xml" />
+    <None Remove="ModelNH\User.hbm.xml" />
+    <EmbeddedResource Include="ModelNH\User.hbm.xml" />
+    <None Update="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
