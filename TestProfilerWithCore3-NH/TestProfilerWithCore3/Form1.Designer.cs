@@ -43,15 +43,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.asyncButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSQLConnect
             // 
             this.buttonSQLConnect.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonSQLConnect.Location = new System.Drawing.Point(28, 637);
+            this.buttonSQLConnect.Location = new System.Drawing.Point(28, 679);
             this.buttonSQLConnect.Name = "buttonSQLConnect";
             this.buttonSQLConnect.Size = new System.Drawing.Size(196, 40);
             this.buttonSQLConnect.TabIndex = 1;
@@ -95,7 +98,7 @@
             // NHButtonRawQuery
             // 
             this.NHButtonRawQuery.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHButtonRawQuery.Location = new System.Drawing.Point(17, 30);
+            this.NHButtonRawQuery.Location = new System.Drawing.Point(17, 19);
             this.NHButtonRawQuery.Name = "NHButtonRawQuery";
             this.NHButtonRawQuery.Size = new System.Drawing.Size(377, 40);
             this.NHButtonRawQuery.TabIndex = 9;
@@ -105,10 +108,10 @@
             // 
             // QueryTextBox
             // 
-            this.QueryTextBox.Location = new System.Drawing.Point(19, 76);
+            this.QueryTextBox.Location = new System.Drawing.Point(18, 65);
             this.QueryTextBox.Multiline = true;
             this.QueryTextBox.Name = "QueryTextBox";
-            this.QueryTextBox.Size = new System.Drawing.Size(376, 57);
+            this.QueryTextBox.Size = new System.Drawing.Size(376, 50);
             this.QueryTextBox.TabIndex = 10;
             // 
             // NHbuttonUpdate
@@ -192,7 +195,7 @@
             this.panel2.Controls.Add(this.QueryTextBox);
             this.panel2.Location = new System.Drawing.Point(28, 445);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 160);
+            this.panel2.Size = new System.Drawing.Size(451, 134);
             this.panel2.TabIndex = 13;
             // 
             // panel3
@@ -207,13 +210,35 @@
             this.panel3.Size = new System.Drawing.Size(451, 172);
             this.panel3.TabIndex = 14;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (196)))), ((int) (((byte) (196)))),
+                ((int) (((byte) (215)))));
+            this.panel4.Controls.Add(this.asyncButton);
+            this.panel4.Location = new System.Drawing.Point(28, 585);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(451, 78);
+            this.panel4.TabIndex = 15;
+            // 
+            // asyncButton
+            // 
+            this.asyncButton.BackColor = System.Drawing.Color.LightSalmon;
+            this.asyncButton.Location = new System.Drawing.Point(17, 16);
+            this.asyncButton.Name = "asyncButton";
+            this.asyncButton.Size = new System.Drawing.Size(376, 40);
+            this.asyncButton.TabIndex = 0;
+            this.asyncButton.Text = "NH - Async";
+            this.asyncButton.UseVisualStyleBackColor = false;
+            this.asyncButton.Click += new System.EventHandler(this.asyncButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(526, 720);
+            this.ClientSize = new System.Drawing.Size(526, 741);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -226,6 +251,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
@@ -246,6 +272,8 @@
         private System.Windows.Forms.Button NHbuttonDelete;
         private System.Windows.Forms.Button NHGetBlogFromPost;
         private System.Windows.Forms.Button NHButtonRawQuery;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button asyncButton;
     }
 }
 

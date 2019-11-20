@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Threading.Tasks;
 using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Linq;
 using TestProfilerWithCore3.ModelNH;
 
 namespace TestProfilerWithCore3
@@ -253,6 +257,65 @@ namespace TestProfilerWithCore3
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+        }
+
+        private void asyncButton_Click(object sender, EventArgs e)
+        {
+            testAsync();
+        }
+        
+        private async Task testAsync()
+        {
+            var config = new Configuration();
+            config.Configure();
+            config.AddAssembly(typeof(Post).Assembly);
+            using var factory = config.BuildSessionFactory();
+            using var session = factory.OpenSession();
+
+            Blog newBlog = new Blog()
+            {
+                AllowsComments = true,
+                CreatedAt = DateTime.Now,
+                Subtitle = "test Async",
+                Title = "The async blog"
+            };
+            
+            // This code worked ok
+            try
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    await session.SaveOrUpdateAsync(newBlog);
+                 
+                    List<Blog> allBlogs = await session.Query<Blog>().ToListAsync();
+                    Console.WriteLine($"Blogs count = {allBlogs.Count}");
+                    
+                    List<Blog> asyncBlogs = await session.Query<Blog>().Where(x => x.Title.Contains("async")).ToListAsync();
+                    Console.WriteLine($"Async blog from query1: id={asyncBlogs[0].Id} title={asyncBlogs[0].Title}");
+                    
+                    Blog blog = await session.Query<Blog>().Where(x => x.Id == newBlog.Id).SingleOrDefaultAsync();
+                    Console.WriteLine($"Async blog from query2: id={asyncBlogs[0].Id} title={asyncBlogs[0].Title}");
+                    
+                    blog = await session.LoadAsync<Blog>(newBlog.Id);
+                    blog.Title = "new title";
+                    await session.SaveAsync(blog);
+                    
+                    blog = await session.GetAsync<Blog>(newBlog.Id);
+                    Console.WriteLine($"Async blog after modify: id={blog.Id} title={blog.Title}");
+                    
+                    await transaction.CommitAsync();
+                }
+
+                using (var transaction = session.BeginTransaction(IsolationLevel.ReadCommitted))
+                {
+                    await session.DeleteAsync(newBlog);
+                    await transaction.CommitAsync();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }
