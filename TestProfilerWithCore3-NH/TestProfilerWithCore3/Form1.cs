@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using NHibernate;
 using NHibernate.Cfg;
@@ -44,13 +45,13 @@ namespace TestProfilerWithCore3
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Cannot open connection!");
+                    MessageBox.Show("Cannot open connection!" + ex.Message);
                 }
             }
 
-            catch (Exception es)
+            catch (Exception ex)
             {
-                MessageBox.Show(es.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -235,7 +236,7 @@ namespace TestProfilerWithCore3
 
         private void NHButtonRawQuery_Click(object sender, EventArgs e)
         {
-            // Any Raw Query
+            // Any HQL Query
             var queryFromUI = QueryTextBox.Text;
             try
             {
@@ -317,6 +318,30 @@ namespace TestProfilerWithCore3
             {
                 Console.WriteLine(e.Message);
             }
+        }
+
+        private Thread bgThread;
+        
+        private void GoButton_Click(object sender, EventArgs e)
+        {
+            bgThread = new Thread(new ThreadStart(DoWork));
+            bgThread.IsBackground = true;
+            bgThread.Start();
+        }
+        
+        private void DoWork() {
+            // Background processing. To update UI from another thread use Control.Invoke(...)
+            // Get all scenarios (numbers) that are checked from UI & execute each...
+            // Use this for now...
+            var myLIst = new List<Scenario>()
+            {
+                new Scenario_0(2,"50"), // todo: take value from UI. for now it is hardcoded.
+                new Scenario_1(2,"test1"),
+                new Scenario_2(2,"test2"),
+                new Scenario_3(2,"test3") 
+            };
+            
+            ExecuteScenarios.Go(myLIst);
         }
     }
 }
