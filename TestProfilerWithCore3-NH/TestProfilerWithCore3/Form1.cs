@@ -20,6 +20,13 @@ namespace TestProfilerWithCore3
         public Form1()
         {
             InitializeComponent();
+
+            Text = "Core3 App for testing NHProf";
+            
+            HelpTextLabel.Text = "1. Select scenarios (click checboxes)" + Environment.NewLine +
+                                 "2. Enter no. of threads to execute scenario (default is 1)" + Environment.NewLine + 
+                                 "3. Enter Param where relevant" + Environment.NewLine +
+                                 "4. Click Go";
             
             checkBoxNH_0.Text = Scenario_0_InsertNewRowsToBlogsTable.Name;
             checkBoxNH_1.Text = Scenario_1_GetAllRowsFromBlogsTable.Name;

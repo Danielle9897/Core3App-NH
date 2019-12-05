@@ -101,6 +101,7 @@ namespace TestProfilerWithCore3
             this.textBoxThreadsNH_0 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.GoButton = new System.Windows.Forms.Button();
+            this.HelpTextLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -117,7 +118,6 @@ namespace TestProfilerWithCore3
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(12, 12);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -137,6 +137,7 @@ namespace TestProfilerWithCore3
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (135)))), ((int) (((byte) (166)))));
+            this.splitContainer1.Panel2.Controls.Add(this.HelpTextLabel);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
@@ -146,13 +147,13 @@ namespace TestProfilerWithCore3
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(916, 643);
             this.splitContainer1.SplitterDistance = 158;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(24, 13);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 55);
             this.label7.TabIndex = 26;
@@ -165,7 +166,6 @@ namespace TestProfilerWithCore3
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.asyncButton);
             this.panel4.Location = new System.Drawing.Point(24, 480);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(266, 44);
             this.panel4.TabIndex = 25;
@@ -173,8 +173,7 @@ namespace TestProfilerWithCore3
             // asyncButton
             // 
             this.asyncButton.BackColor = System.Drawing.Color.LightSalmon;
-            this.asyncButton.Location = new System.Drawing.Point(4, 5);
-            this.asyncButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.asyncButton.Location = new System.Drawing.Point(3, 5);
             this.asyncButton.Name = "asyncButton";
             this.asyncButton.Size = new System.Drawing.Size(250, 30);
             this.asyncButton.TabIndex = 0;
@@ -191,7 +190,6 @@ namespace TestProfilerWithCore3
             this.panel3.Controls.Add(this.NHbuttonGet);
             this.panel3.Controls.Add(this.NHGetBlogsCount);
             this.panel3.Location = new System.Drawing.Point(24, 77);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(266, 113);
             this.panel3.TabIndex = 24;
@@ -199,8 +197,7 @@ namespace TestProfilerWithCore3
             // NHbuttonAdd
             // 
             this.NHbuttonAdd.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHbuttonAdd.Location = new System.Drawing.Point(4, 3);
-            this.NHbuttonAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHbuttonAdd.Location = new System.Drawing.Point(3, 3);
             this.NHbuttonAdd.Name = "NHbuttonAdd";
             this.NHbuttonAdd.Size = new System.Drawing.Size(250, 30);
             this.NHbuttonAdd.TabIndex = 1;
@@ -211,8 +208,7 @@ namespace TestProfilerWithCore3
             // NHbuttonGet
             // 
             this.NHbuttonGet.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHbuttonGet.Location = new System.Drawing.Point(4, 75);
-            this.NHbuttonGet.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHbuttonGet.Location = new System.Drawing.Point(3, 75);
             this.NHbuttonGet.Name = "NHbuttonGet";
             this.NHbuttonGet.Size = new System.Drawing.Size(250, 30);
             this.NHbuttonGet.TabIndex = 3;
@@ -223,8 +219,7 @@ namespace TestProfilerWithCore3
             // NHGetBlogsCount
             // 
             this.NHGetBlogsCount.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHGetBlogsCount.Location = new System.Drawing.Point(4, 39);
-            this.NHGetBlogsCount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHGetBlogsCount.Location = new System.Drawing.Point(3, 39);
             this.NHGetBlogsCount.Name = "NHGetBlogsCount";
             this.NHGetBlogsCount.Size = new System.Drawing.Size(250, 30);
             this.NHGetBlogsCount.TabIndex = 8;
@@ -240,7 +235,6 @@ namespace TestProfilerWithCore3
             this.panel2.Controls.Add(this.NHButtonRawQuery);
             this.panel2.Controls.Add(this.QueryTextBox);
             this.panel2.Location = new System.Drawing.Point(24, 372);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 102);
             this.panel2.TabIndex = 23;
@@ -248,8 +242,7 @@ namespace TestProfilerWithCore3
             // NHButtonRawQuery
             // 
             this.NHButtonRawQuery.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHButtonRawQuery.Location = new System.Drawing.Point(4, 3);
-            this.NHButtonRawQuery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHButtonRawQuery.Location = new System.Drawing.Point(3, 3);
             this.NHButtonRawQuery.Name = "NHButtonRawQuery";
             this.NHButtonRawQuery.Size = new System.Drawing.Size(250, 30);
             this.NHButtonRawQuery.TabIndex = 9;
@@ -259,8 +252,7 @@ namespace TestProfilerWithCore3
             // 
             // QueryTextBox
             // 
-            this.QueryTextBox.Location = new System.Drawing.Point(4, 39);
-            this.QueryTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.QueryTextBox.Location = new System.Drawing.Point(3, 39);
             this.QueryTextBox.Multiline = true;
             this.QueryTextBox.Name = "QueryTextBox";
             this.QueryTextBox.Size = new System.Drawing.Size(250, 52);
@@ -277,7 +269,6 @@ namespace TestProfilerWithCore3
             this.panel1.Controls.Add(this.NHbuttonDelete);
             this.panel1.Controls.Add(this.NHGetBlogFromPost);
             this.panel1.Location = new System.Drawing.Point(24, 196);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(266, 170);
             this.panel1.TabIndex = 22;
@@ -285,8 +276,7 @@ namespace TestProfilerWithCore3
             // NHbuttonGetById
             // 
             this.NHbuttonGetById.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHbuttonGetById.Location = new System.Drawing.Point(4, 3);
-            this.NHbuttonGetById.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHbuttonGetById.Location = new System.Drawing.Point(3, 3);
             this.NHbuttonGetById.Name = "NHbuttonGetById";
             this.NHbuttonGetById.Size = new System.Drawing.Size(250, 30);
             this.NHbuttonGetById.TabIndex = 4;
@@ -296,8 +286,7 @@ namespace TestProfilerWithCore3
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(18, 140);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(17, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 11;
@@ -306,8 +295,7 @@ namespace TestProfilerWithCore3
             // NHbuttonUpdate
             // 
             this.NHbuttonUpdate.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHbuttonUpdate.Location = new System.Drawing.Point(4, 35);
-            this.NHbuttonUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHbuttonUpdate.Location = new System.Drawing.Point(3, 35);
             this.NHbuttonUpdate.Name = "NHbuttonUpdate";
             this.NHbuttonUpdate.Size = new System.Drawing.Size(250, 30);
             this.NHbuttonUpdate.TabIndex = 4;
@@ -318,7 +306,6 @@ namespace TestProfilerWithCore3
             // TextBoxBlogId
             // 
             this.TextBoxBlogId.Location = new System.Drawing.Point(80, 140);
-            this.TextBoxBlogId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TextBoxBlogId.Name = "TextBoxBlogId";
             this.TextBoxBlogId.Size = new System.Drawing.Size(84, 23);
             this.TextBoxBlogId.TabIndex = 5;
@@ -326,8 +313,7 @@ namespace TestProfilerWithCore3
             // NHbuttonDelete
             // 
             this.NHbuttonDelete.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHbuttonDelete.Location = new System.Drawing.Point(4, 72);
-            this.NHbuttonDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHbuttonDelete.Location = new System.Drawing.Point(3, 72);
             this.NHbuttonDelete.Name = "NHbuttonDelete";
             this.NHbuttonDelete.Size = new System.Drawing.Size(250, 30);
             this.NHbuttonDelete.TabIndex = 6;
@@ -338,8 +324,7 @@ namespace TestProfilerWithCore3
             // NHGetBlogFromPost
             // 
             this.NHGetBlogFromPost.BackColor = System.Drawing.Color.LightSalmon;
-            this.NHGetBlogFromPost.Location = new System.Drawing.Point(4, 107);
-            this.NHGetBlogFromPost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NHGetBlogFromPost.Location = new System.Drawing.Point(3, 107);
             this.NHGetBlogFromPost.Name = "NHGetBlogFromPost";
             this.NHGetBlogFromPost.Size = new System.Drawing.Size(250, 30);
             this.NHGetBlogFromPost.TabIndex = 7;
@@ -351,7 +336,6 @@ namespace TestProfilerWithCore3
             // 
             this.buttonSQLConnect.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonSQLConnect.Location = new System.Drawing.Point(24, 528);
-            this.buttonSQLConnect.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSQLConnect.Name = "buttonSQLConnect";
             this.buttonSQLConnect.Size = new System.Drawing.Size(266, 32);
             this.buttonSQLConnect.TabIndex = 21;
@@ -391,10 +375,8 @@ namespace TestProfilerWithCore3
             this.groupBox2.Controls.Add(this.textBoxThreadsSO_0);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox2.Location = new System.Drawing.Point(59, 276);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Location = new System.Drawing.Point(59, 280);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox2.Size = new System.Drawing.Size(622, 264);
             this.groupBox2.TabIndex = 72;
@@ -406,7 +388,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_6.Location = new System.Drawing.Point(24, 219);
-            this.checkBoxSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_6.Name = "checkBoxSO_6";
             this.checkBoxSO_6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_6.Size = new System.Drawing.Size(238, 24);
@@ -419,7 +400,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_5.Location = new System.Drawing.Point(24, 189);
-            this.checkBoxSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_5.Name = "checkBoxSO_5";
             this.checkBoxSO_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_5.Size = new System.Drawing.Size(238, 24);
@@ -432,7 +412,6 @@ namespace TestProfilerWithCore3
             this.labelSO_6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_6.Location = new System.Drawing.Point(421, 223);
-            this.labelSO_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_6.Name = "labelSO_6";
             this.labelSO_6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_6.Size = new System.Drawing.Size(192, 23);
@@ -444,7 +423,6 @@ namespace TestProfilerWithCore3
             this.labelSO_5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_5.Location = new System.Drawing.Point(421, 193);
-            this.labelSO_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_5.Name = "labelSO_5";
             this.labelSO_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_5.Size = new System.Drawing.Size(192, 23);
@@ -458,7 +436,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_6.Location = new System.Drawing.Point(332, 216);
-            this.textBoxParamSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_6.Name = "textBoxParamSO_6";
             this.textBoxParamSO_6.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_6.TabIndex = 104;
@@ -467,8 +444,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_6.Location = new System.Drawing.Point(270, 216);
-            this.textBoxThreadsSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_6.Location = new System.Drawing.Point(269, 216);
             this.textBoxThreadsSO_6.Name = "textBoxThreadsSO_6";
             this.textBoxThreadsSO_6.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_6.TabIndex = 103;
@@ -480,7 +456,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_5.Location = new System.Drawing.Point(332, 186);
-            this.textBoxParamSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_5.Name = "textBoxParamSO_5";
             this.textBoxParamSO_5.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_5.TabIndex = 102;
@@ -489,8 +464,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_5.Location = new System.Drawing.Point(270, 186);
-            this.textBoxThreadsSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_5.Location = new System.Drawing.Point(269, 186);
             this.textBoxThreadsSO_5.Name = "textBoxThreadsSO_5";
             this.textBoxThreadsSO_5.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_5.TabIndex = 101;
@@ -500,7 +474,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_4.Location = new System.Drawing.Point(24, 159);
-            this.checkBoxSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_4.Name = "checkBoxSO_4";
             this.checkBoxSO_4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_4.Size = new System.Drawing.Size(238, 24);
@@ -513,7 +486,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_3.Location = new System.Drawing.Point(24, 130);
-            this.checkBoxSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_3.Name = "checkBoxSO_3";
             this.checkBoxSO_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_3.Size = new System.Drawing.Size(238, 24);
@@ -526,7 +498,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_2.Location = new System.Drawing.Point(24, 102);
-            this.checkBoxSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_2.Name = "checkBoxSO_2";
             this.checkBoxSO_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_2.Size = new System.Drawing.Size(238, 24);
@@ -539,7 +510,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_1.Location = new System.Drawing.Point(24, 72);
-            this.checkBoxSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_1.Name = "checkBoxSO_1";
             this.checkBoxSO_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_1.Size = new System.Drawing.Size(238, 24);
@@ -552,7 +522,6 @@ namespace TestProfilerWithCore3
             this.labelSO_4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_4.Location = new System.Drawing.Point(421, 163);
-            this.labelSO_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_4.Name = "labelSO_4";
             this.labelSO_4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_4.Size = new System.Drawing.Size(192, 23);
@@ -564,7 +533,6 @@ namespace TestProfilerWithCore3
             this.labelSO_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_3.Location = new System.Drawing.Point(421, 134);
-            this.labelSO_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_3.Name = "labelSO_3";
             this.labelSO_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_3.Size = new System.Drawing.Size(192, 23);
@@ -576,7 +544,6 @@ namespace TestProfilerWithCore3
             this.labelSO_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_2.Location = new System.Drawing.Point(421, 105);
-            this.labelSO_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_2.Name = "labelSO_2";
             this.labelSO_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_2.Size = new System.Drawing.Size(177, 23);
@@ -588,7 +555,6 @@ namespace TestProfilerWithCore3
             this.labelSO_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_1.Location = new System.Drawing.Point(421, 76);
-            this.labelSO_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_1.Name = "labelSO_1";
             this.labelSO_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_1.Size = new System.Drawing.Size(192, 23);
@@ -600,7 +566,6 @@ namespace TestProfilerWithCore3
             this.labelSO_0.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelSO_0.Location = new System.Drawing.Point(421, 44);
-            this.labelSO_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSO_0.Name = "labelSO_0";
             this.labelSO_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelSO_0.Size = new System.Drawing.Size(192, 23);
@@ -614,7 +579,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_4.Location = new System.Drawing.Point(332, 156);
-            this.textBoxParamSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_4.Name = "textBoxParamSO_4";
             this.textBoxParamSO_4.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_4.TabIndex = 86;
@@ -623,8 +587,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_4.Location = new System.Drawing.Point(270, 156);
-            this.textBoxThreadsSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_4.Location = new System.Drawing.Point(269, 156);
             this.textBoxThreadsSO_4.Name = "textBoxThreadsSO_4";
             this.textBoxThreadsSO_4.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_4.TabIndex = 85;
@@ -634,7 +597,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_3.Location = new System.Drawing.Point(332, 127);
-            this.textBoxParamSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_3.Name = "textBoxParamSO_3";
             this.textBoxParamSO_3.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_3.TabIndex = 84;
@@ -643,8 +605,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_3.Location = new System.Drawing.Point(270, 127);
-            this.textBoxThreadsSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_3.Location = new System.Drawing.Point(269, 127);
             this.textBoxThreadsSO_3.Name = "textBoxThreadsSO_3";
             this.textBoxThreadsSO_3.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_3.TabIndex = 83;
@@ -654,7 +615,6 @@ namespace TestProfilerWithCore3
             this.checkBoxSO_0.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxSO_0.Location = new System.Drawing.Point(24, 43);
-            this.checkBoxSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxSO_0.Name = "checkBoxSO_0";
             this.checkBoxSO_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBoxSO_0.Size = new System.Drawing.Size(238, 24);
@@ -667,7 +627,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_2.Location = new System.Drawing.Point(332, 98);
-            this.textBoxParamSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_2.Name = "textBoxParamSO_2";
             this.textBoxParamSO_2.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_2.TabIndex = 78;
@@ -676,8 +635,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_2.Location = new System.Drawing.Point(270, 98);
-            this.textBoxThreadsSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_2.Location = new System.Drawing.Point(269, 98);
             this.textBoxThreadsSO_2.Name = "textBoxThreadsSO_2";
             this.textBoxThreadsSO_2.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_2.TabIndex = 77;
@@ -687,7 +645,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_1.Location = new System.Drawing.Point(332, 69);
-            this.textBoxParamSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_1.Name = "textBoxParamSO_1";
             this.textBoxParamSO_1.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_1.TabIndex = 74;
@@ -696,8 +653,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_1.Location = new System.Drawing.Point(270, 69);
-            this.textBoxThreadsSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_1.Location = new System.Drawing.Point(269, 69);
             this.textBoxThreadsSO_1.Name = "textBoxThreadsSO_1";
             this.textBoxThreadsSO_1.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_1.TabIndex = 73;
@@ -707,7 +663,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamSO_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamSO_0.Location = new System.Drawing.Point(332, 40);
-            this.textBoxParamSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamSO_0.Name = "textBoxParamSO_0";
             this.textBoxParamSO_0.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamSO_0.TabIndex = 72;
@@ -716,8 +671,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsSO_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsSO_0.Location = new System.Drawing.Point(270, 40);
-            this.textBoxThreadsSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_0.Location = new System.Drawing.Point(269, 40);
             this.textBoxThreadsSO_0.Name = "textBoxThreadsSO_0";
             this.textBoxThreadsSO_0.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsSO_0.TabIndex = 71;
@@ -744,10 +698,8 @@ namespace TestProfilerWithCore3
             this.groupBox1.Controls.Add(this.textBoxThreadsNH_0);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox1.Location = new System.Drawing.Point(59, 77);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Location = new System.Drawing.Point(59, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(622, 193);
             this.groupBox1.TabIndex = 71;
@@ -759,7 +711,6 @@ namespace TestProfilerWithCore3
             this.labelNH_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelNH_3.Location = new System.Drawing.Point(421, 144);
-            this.labelNH_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNH_3.Name = "labelNH_3";
             this.labelNH_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelNH_3.Size = new System.Drawing.Size(192, 23);
@@ -771,7 +722,6 @@ namespace TestProfilerWithCore3
             this.labelNH_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelNH_2.Location = new System.Drawing.Point(421, 119);
-            this.labelNH_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNH_2.Name = "labelNH_2";
             this.labelNH_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelNH_2.Size = new System.Drawing.Size(177, 23);
@@ -783,7 +733,6 @@ namespace TestProfilerWithCore3
             this.labelNH_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelNH_1.Location = new System.Drawing.Point(421, 90);
-            this.labelNH_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNH_1.Name = "labelNH_1";
             this.labelNH_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelNH_1.Size = new System.Drawing.Size(177, 23);
@@ -795,10 +744,9 @@ namespace TestProfilerWithCore3
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.Location = new System.Drawing.Point(344, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(130, 23);
+            this.label3.Size = new System.Drawing.Size(129, 23);
             this.label3.TabIndex = 64;
             this.label3.Text = "Param";
             // 
@@ -806,8 +754,7 @@ namespace TestProfilerWithCore3
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(270, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(269, 23);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(65, 23);
@@ -819,7 +766,6 @@ namespace TestProfilerWithCore3
             this.labelNH_0.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.labelNH_0.Location = new System.Drawing.Point(421, 61);
-            this.labelNH_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNH_0.Name = "labelNH_0";
             this.labelNH_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelNH_0.Size = new System.Drawing.Size(192, 23);
@@ -831,7 +777,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamNH_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamNH_3.Location = new System.Drawing.Point(332, 141);
-            this.textBoxParamNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamNH_3.Name = "textBoxParamNH_3";
             this.textBoxParamNH_3.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamNH_3.TabIndex = 58;
@@ -840,8 +785,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsNH_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsNH_3.Location = new System.Drawing.Point(270, 141);
-            this.textBoxThreadsNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_3.Location = new System.Drawing.Point(269, 141);
             this.textBoxThreadsNH_3.Name = "textBoxThreadsNH_3";
             this.textBoxThreadsNH_3.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsNH_3.TabIndex = 57;
@@ -851,7 +795,6 @@ namespace TestProfilerWithCore3
             this.checkBoxNH_3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxNH_3.Location = new System.Drawing.Point(24, 143);
-            this.checkBoxNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxNH_3.Name = "checkBoxNH_3";
             this.checkBoxNH_3.Size = new System.Drawing.Size(238, 24);
             this.checkBoxNH_3.TabIndex = 56;
@@ -863,7 +806,6 @@ namespace TestProfilerWithCore3
             this.checkBoxNH_0.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxNH_0.Location = new System.Drawing.Point(24, 57);
-            this.checkBoxNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxNH_0.Name = "checkBoxNH_0";
             this.checkBoxNH_0.Size = new System.Drawing.Size(238, 24);
             this.checkBoxNH_0.TabIndex = 55;
@@ -875,7 +817,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamNH_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamNH_2.Location = new System.Drawing.Point(332, 112);
-            this.textBoxParamNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamNH_2.Name = "textBoxParamNH_2";
             this.textBoxParamNH_2.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamNH_2.TabIndex = 54;
@@ -884,8 +825,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsNH_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsNH_2.Location = new System.Drawing.Point(270, 112);
-            this.textBoxThreadsNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_2.Location = new System.Drawing.Point(269, 112);
             this.textBoxThreadsNH_2.Name = "textBoxThreadsNH_2";
             this.textBoxThreadsNH_2.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsNH_2.TabIndex = 53;
@@ -895,7 +835,6 @@ namespace TestProfilerWithCore3
             this.checkBoxNH_2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxNH_2.Location = new System.Drawing.Point(24, 114);
-            this.checkBoxNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxNH_2.Name = "checkBoxNH_2";
             this.checkBoxNH_2.Size = new System.Drawing.Size(238, 24);
             this.checkBoxNH_2.TabIndex = 52;
@@ -907,7 +846,6 @@ namespace TestProfilerWithCore3
             this.checkBoxNH_1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkBoxNH_1.Location = new System.Drawing.Point(24, 87);
-            this.checkBoxNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxNH_1.Name = "checkBoxNH_1";
             this.checkBoxNH_1.Size = new System.Drawing.Size(238, 24);
             this.checkBoxNH_1.TabIndex = 51;
@@ -921,7 +859,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamNH_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamNH_1.Location = new System.Drawing.Point(332, 83);
-            this.textBoxParamNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamNH_1.Name = "textBoxParamNH_1";
             this.textBoxParamNH_1.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamNH_1.TabIndex = 50;
@@ -930,8 +867,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsNH_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsNH_1.Location = new System.Drawing.Point(270, 83);
-            this.textBoxThreadsNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_1.Location = new System.Drawing.Point(269, 83);
             this.textBoxThreadsNH_1.Name = "textBoxThreadsNH_1";
             this.textBoxThreadsNH_1.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsNH_1.TabIndex = 49;
@@ -941,7 +877,6 @@ namespace TestProfilerWithCore3
             this.textBoxParamNH_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBoxParamNH_0.Location = new System.Drawing.Point(332, 54);
-            this.textBoxParamNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxParamNH_0.Name = "textBoxParamNH_0";
             this.textBoxParamNH_0.Size = new System.Drawing.Size(81, 27);
             this.textBoxParamNH_0.TabIndex = 48;
@@ -950,8 +885,7 @@ namespace TestProfilerWithCore3
             // 
             this.textBoxThreadsNH_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.textBoxThreadsNH_0.Location = new System.Drawing.Point(270, 54);
-            this.textBoxThreadsNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_0.Location = new System.Drawing.Point(269, 54);
             this.textBoxThreadsNH_0.Name = "textBoxThreadsNH_0";
             this.textBoxThreadsNH_0.Size = new System.Drawing.Size(54, 27);
             this.textBoxThreadsNH_0.TabIndex = 47;
@@ -960,7 +894,6 @@ namespace TestProfilerWithCore3
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(38, 13);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(141, 55);
@@ -975,14 +908,24 @@ namespace TestProfilerWithCore3
             this.GoButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.GoButton.ForeColor = System.Drawing.Color.Black;
-            this.GoButton.Location = new System.Drawing.Point(217, 560);
-            this.GoButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GoButton.Location = new System.Drawing.Point(198, 562);
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(304, 57);
+            this.GoButton.Size = new System.Drawing.Size(323, 60);
             this.GoButton.TabIndex = 9;
             this.GoButton.Text = "Go";
             this.GoButton.UseVisualStyleBackColor = false;
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
+            // 
+            // HelpTextLabel
+            // 
+            this.HelpTextLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.HelpTextLabel.Location = new System.Drawing.Point(223, 13);
+            this.HelpTextLabel.Name = "HelpTextLabel";
+            this.HelpTextLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.HelpTextLabel.Size = new System.Drawing.Size(458, 65);
+            this.HelpTextLabel.TabIndex = 73;
+            this.HelpTextLabel.Text = "from code";
             // 
             // Form1
             // 
@@ -994,7 +937,6 @@ namespace TestProfilerWithCore3
             this.ClientSize = new System.Drawing.Size(941, 668);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1085,6 +1027,7 @@ namespace TestProfilerWithCore3
         private System.Windows.Forms.TextBox textBoxParamSO_1;
         private System.Windows.Forms.TextBox textBoxParamSO_0;
         private System.Windows.Forms.TextBox textBoxThreadsSO_0;
+        private System.Windows.Forms.Label HelpTextLabel;
     }
 }
 
