@@ -10,6 +10,8 @@ using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Linq;
 using TestProfilerWithCore3.ModelNH;
+using TestProfilerWithCore3.Load;
+using Environment = System.Environment;
 
 namespace TestProfilerWithCore3
 {
@@ -18,6 +20,30 @@ namespace TestProfilerWithCore3
         public Form1()
         {
             InitializeComponent();
+            
+            checkBoxNH_0.Text = Scenario_0_InsertNewRowsToBlogsTable.Name;
+            checkBoxNH_1.Text = Scenario_1_GetAllRowsFromBlogsTable.Name;
+            checkBoxNH_2.Text = Scenario_2_UpdateAllRowsInBlogsTable.Name;
+            checkBoxNH_3.Text = Scenario_3_QueryBlogsTableById.Name;
+            checkBoxSO_0.Text = Scenario_0_SO_InsertNewRowsToUsersTable.Name;
+            checkBoxSO_1.Text = Scenario_1_SO_GetTopRowsFromUsersTableWithCondition.Name;
+            checkBoxSO_2.Text = Scenario_2_SO_UpdateRowsInUsersTableWithCondition.Name;
+            checkBoxSO_3.Text = Scenario_3_SO_DeleteFromCommentsTableWithCondition.Name;
+            checkBoxSO_4.Text = Scenario_4_SO_TimeConsumingActionOnPostsTable.Name;
+            checkBoxSO_5.Text = Scenario_5_SO_TimeConsumingActionOnPostsTable.Name;
+            checkBoxSO_6.Text = Scenario_6_SO_TimeConsumingActionOnVotesTable.Name;
+            labelNH_0.Text = Scenario_0_InsertNewRowsToBlogsTable.ParamText;
+            labelNH_1.Text = Scenario_1_GetAllRowsFromBlogsTable.ParamText;
+            labelNH_2.Text = Scenario_2_UpdateAllRowsInBlogsTable.ParamText;
+            labelNH_3.Text = Scenario_3_QueryBlogsTableById.ParamText;
+            labelSO_0.Text = Scenario_0_SO_InsertNewRowsToUsersTable.ParamText;
+            labelSO_1.Text = Scenario_1_SO_GetTopRowsFromUsersTableWithCondition.ParamText;
+            labelSO_2.Text = Scenario_2_SO_UpdateRowsInUsersTableWithCondition.ParamText;
+            labelSO_3.Text = Scenario_3_SO_DeleteFromCommentsTableWithCondition.ParamText;
+            labelSO_4.Text = Scenario_4_SO_TimeConsumingActionOnPostsTable.ParamText;
+            labelSO_5.Text = Scenario_5_SO_TimeConsumingActionOnPostsTable.ParamText;
+            labelSO_6.Text = Scenario_6_SO_TimeConsumingActionOnVotesTable.ParamText;
+            
             ActiveControl = NHbuttonAdd;
         }
 
@@ -25,7 +51,7 @@ namespace TestProfilerWithCore3
         {
             try
             {
-                String connectionStr = "Data Source=.\\sqlexpress;Initial Catalog=HibernatingRhinos.Profiler.IntegrationTests;Integrated Security=True";
+                String connectionStr = ExecuteScenarios.ConnectionStringToTestsDatabase;
                 SqlConnection connection = new SqlConnection(connectionStr);
                 String query = "select * from Blogs";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -324,24 +350,76 @@ namespace TestProfilerWithCore3
         
         private void GoButton_Click(object sender, EventArgs e)
         {
-            bgThread = new Thread(new ThreadStart(DoWork));
+            //bgThread = new Thread(new ThreadStart(DoWork));
+            bgThread = new Thread(DoWork);
             bgThread.IsBackground = true;
             bgThread.Start();
         }
         
         private void DoWork() {
-            // Background processing. To update UI from another thread use Control.Invoke(...)
-            // Get all scenarios (numbers) that are checked from UI & execute each...
-            // Use this for now...
-            var myLIst = new List<Scenario>()
-            {
-                new Scenario_0(2,"50"), // todo: take value from UI. for now it is hardcoded.
-                new Scenario_1(2,"test1"),
-                new Scenario_2(2,"test2"),
-                new Scenario_3(2,"test3") 
-            };
+            // This is background processing. To update UI from another thread use Control.Invoke(...)
             
-            ExecuteScenarios.Go(myLIst);
+            var scenariosList = new List<Scenario>();
+            
+            if (checkBoxNH_0.Checked && GetParamValue(textBoxParamNH_0,Scenario_0_InsertNewRowsToBlogsTable.Name, out string param))
+                scenariosList.Add(new Scenario_0_InsertNewRowsToBlogsTable(GetThreadsNumber(textBoxThreadsNH_0), param));
+            
+            if (checkBoxNH_1.Checked)
+                scenariosList.Add(new Scenario_1_GetAllRowsFromBlogsTable(GetThreadsNumber(textBoxThreadsNH_1), ""));
+            
+            if (checkBoxNH_2.Checked && GetParamValue(textBoxParamNH_2,Scenario_2_UpdateAllRowsInBlogsTable.Name, out param))
+                scenariosList.Add(new Scenario_2_UpdateAllRowsInBlogsTable(GetThreadsNumber(textBoxThreadsNH_2), param));
+            
+            if (checkBoxNH_3.Checked && GetParamValue(textBoxParamNH_3,Scenario_3_QueryBlogsTableById.Name, out param))
+                scenariosList.Add(new Scenario_3_QueryBlogsTableById(GetThreadsNumber(textBoxThreadsNH_3), param));
+            
+            if (checkBoxSO_0.Checked && GetParamValue(textBoxParamSO_0,Scenario_0_SO_InsertNewRowsToUsersTable.Name, out param))
+                scenariosList.Add(new Scenario_0_SO_InsertNewRowsToUsersTable(GetThreadsNumber(textBoxThreadsSO_0), param));
+            
+            if (checkBoxSO_1.Checked && GetParamValue(textBoxParamSO_1,Scenario_1_SO_GetTopRowsFromUsersTableWithCondition.Name, out param))
+                scenariosList.Add(new Scenario_1_SO_GetTopRowsFromUsersTableWithCondition(GetThreadsNumber(textBoxThreadsSO_1), param));
+            
+            if (checkBoxSO_2.Checked && GetParamValue(textBoxParamSO_2,Scenario_2_SO_UpdateRowsInUsersTableWithCondition.Name, out param))
+                scenariosList.Add(new Scenario_2_SO_UpdateRowsInUsersTableWithCondition(GetThreadsNumber(textBoxThreadsSO_2), param));
+            
+            if (checkBoxSO_3.Checked && GetParamValue(textBoxParamSO_3,Scenario_3_SO_DeleteFromCommentsTableWithCondition.Name, out param))
+                scenariosList.Add(new Scenario_3_SO_DeleteFromCommentsTableWithCondition(GetThreadsNumber(textBoxThreadsSO_3), param));
+            
+            if (checkBoxSO_4.Checked)
+                scenariosList.Add(new Scenario_4_SO_TimeConsumingActionOnPostsTable(GetThreadsNumber(textBoxThreadsSO_4), ""));
+            
+            if (checkBoxSO_5.Checked)
+                scenariosList.Add(new Scenario_5_SO_TimeConsumingActionOnPostsTable(GetThreadsNumber(textBoxThreadsSO_5), ""));
+            
+            if (checkBoxSO_6.Checked)
+                scenariosList.Add(new Scenario_6_SO_TimeConsumingActionOnVotesTable(GetThreadsNumber(textBoxThreadsSO_6), ""));
+
+            if (scenariosList.Count == 0)
+            {
+                MessageBox.Show("No scenarios are scheduled to run", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                ExecuteScenarios.Go(scenariosList);
+            }
+        }
+
+        private int GetThreadsNumber(TextBox threadTextBox)
+        {
+            var result = int.TryParse(threadTextBox.Text, out var threadsNumber);
+            return (result == false || threadsNumber == 0) ? 1 : threadsNumber; 
+        }
+
+        private bool GetParamValue(TextBox paramTextBox, string name, out string param)
+        {
+            param = paramTextBox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(param))
+            {
+                MessageBox.Show($"Scenario: *** {name} *** {Environment.NewLine}{Environment.NewLine}Missing param value", "Missing Param", MessageBoxButtons.OK);
+                return false;
+            }
+
+            return true;
         }
     }
 }

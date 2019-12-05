@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="TestProfilerWithCore3"
+				   namespace="TestProfilerWithCore3.ModelSO">
+	<class name="PostSO" table="Posts">
+		<id name="Id"><generator class="identity"/></id>
+		<property name="AcceptedAnswerId"/>
+		<property name="AnswerCount"/>
+		<property name="Body"/>
+		<property name="ClosedDate"/>
+		<property name="CommentCount"/>
+		<property name="CommunityOwnedDate"/>
+		<property name="CreationDate"/>
+		<property name="FavoriteCount"/>
+		<property name="LastActivityDate"/>
+		<property name="LastEditDate"/>
+		<property name="LastEditorDisplayName"/>
+		<property name="LastEditorUserId"/>
+		<property name="OwnerUserId"/>
+		<property name="ParentId"/>
+		<property name="PostTypeId"/>
+		<property name="Score"/>
+		<property name="Tags"/>
+		<property name="Title"/>
+		<property name="ViewCount"/>
+	</class>
+</hibernate-mapping>

@@ -14,6 +14,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="ModelSO\BadgeSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\LinkTypeSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\CommentSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\PostSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\PostLinkSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\PostTypeSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\UserSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\VoteSO.hbm.xml" />
+    <EmbeddedResource Include="ModelSO\VoteTypeSO.hbm.xml" />
     <None Remove="ModelNH\Blog.hbm.xml" />
     <EmbeddedResource Include="ModelNH\Blog.hbm.xml" />
     <None Remove="ModelNH\Category.hbm.xml" />

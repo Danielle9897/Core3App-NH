@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="TestProfilerWithCore3"
+                   namespace="TestProfilerWithCore3.ModelSO">
+  <class name="PostLinkSO" mutable="true" table="PostLinks">
+      <cache usage="read-only"/>
+      <id name="Id"><generator class="identity"/></id>
+      <property name="CreationDate"/>
+      <property name="PostId"/>
+      <property name="RelatedPostId"/>
+      <property name="LinkTypeId"/>
+  </class>
+</hibernate-mapping>

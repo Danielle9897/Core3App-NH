@@ -1,4 +1,8 @@
-﻿namespace TestProfilerWithCore3
+﻿using System.Windows.Forms;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using TestProfilerWithCore3.Load;
+
+namespace TestProfilerWithCore3
 {
     partial class Form1
     {
@@ -47,22 +51,56 @@
             this.NHbuttonDelete = new System.Windows.Forms.Button();
             this.NHGetBlogFromPost = new System.Windows.Forms.Button();
             this.buttonSQLConnect = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxSO_6 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSO_5 = new System.Windows.Forms.CheckBox();
+            this.labelSO_6 = new System.Windows.Forms.Label();
+            this.labelSO_5 = new System.Windows.Forms.Label();
+            this.textBoxParamSO_6 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_6 = new System.Windows.Forms.TextBox();
+            this.textBoxParamSO_5 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_5 = new System.Windows.Forms.TextBox();
+            this.checkBoxSO_4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSO_3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSO_2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSO_1 = new System.Windows.Forms.CheckBox();
+            this.labelSO_4 = new System.Windows.Forms.Label();
+            this.labelSO_3 = new System.Windows.Forms.Label();
+            this.labelSO_2 = new System.Windows.Forms.Label();
+            this.labelSO_1 = new System.Windows.Forms.Label();
+            this.labelSO_0 = new System.Windows.Forms.Label();
+            this.textBoxParamSO_4 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_4 = new System.Windows.Forms.TextBox();
+            this.textBoxParamSO_3 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_3 = new System.Windows.Forms.TextBox();
+            this.checkBoxSO_0 = new System.Windows.Forms.CheckBox();
+            this.textBoxParamSO_2 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_2 = new System.Windows.Forms.TextBox();
+            this.textBoxParamSO_1 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_1 = new System.Windows.Forms.TextBox();
+            this.textBoxParamSO_0 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsSO_0 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelNH_3 = new System.Windows.Forms.Label();
+            this.labelNH_2 = new System.Windows.Forms.Label();
+            this.labelNH_1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.labelNH_0 = new System.Windows.Forms.Label();
+            this.textBoxParamNH_3 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsNH_3 = new System.Windows.Forms.TextBox();
+            this.checkBoxNH_3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNH_0 = new System.Windows.Forms.CheckBox();
+            this.textBoxParamNH_2 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsNH_2 = new System.Windows.Forms.TextBox();
+            this.checkBoxNH_2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNH_1 = new System.Windows.Forms.CheckBox();
+            this.textBoxParamNH_1 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsNH_1 = new System.Windows.Forms.TextBox();
+            this.textBoxParamNH_0 = new System.Windows.Forms.TextBox();
+            this.textBoxThreadsNH_0 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.GoButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +109,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,27 +137,15 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))),
                 ((int) (((byte) (135)))), ((int) (((byte) (166)))));
-            this.splitContainer1.Panel2.Controls.Add(this.textBox7);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox8);
-            this.splitContainer1.Panel2.Controls.Add(this.checkBox4);
-            this.splitContainer1.Panel2.Controls.Add(this.checkBox3);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox5);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox6);
-            this.splitContainer1.Panel2.Controls.Add(this.checkBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.checkBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox4);
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
             this.splitContainer1.Panel2.Controls.Add(this.GoButton);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox3);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Panel2MinSize = 450;
+            this.splitContainer1.Panel2MinSize = 600;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(786, 630);
-            this.splitContainer1.SplitterDistance = 152;
+            this.splitContainer1.Size = new System.Drawing.Size(916, 643);
+            this.splitContainer1.SplitterDistance = 158;
             this.splitContainer1.TabIndex = 16;
             // 
             // label7
@@ -331,121 +359,602 @@
             this.buttonSQLConnect.UseVisualStyleBackColor = false;
             this.buttonSQLConnect.Click += new System.EventHandler(this.buttonSQLConnect_Click);
             // 
-            // textBox7
+            // groupBox2
             // 
-            this.textBox7.Location = new System.Drawing.Point(275, 225);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(81, 23);
-            this.textBox7.TabIndex = 42;
+            this.groupBox2.Controls.Add(this.checkBoxSO_6);
+            this.groupBox2.Controls.Add(this.checkBoxSO_5);
+            this.groupBox2.Controls.Add(this.labelSO_6);
+            this.groupBox2.Controls.Add(this.labelSO_5);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_6);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_6);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_5);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_5);
+            this.groupBox2.Controls.Add(this.checkBoxSO_4);
+            this.groupBox2.Controls.Add(this.checkBoxSO_3);
+            this.groupBox2.Controls.Add(this.checkBoxSO_2);
+            this.groupBox2.Controls.Add(this.checkBoxSO_1);
+            this.groupBox2.Controls.Add(this.labelSO_4);
+            this.groupBox2.Controls.Add(this.labelSO_3);
+            this.groupBox2.Controls.Add(this.labelSO_2);
+            this.groupBox2.Controls.Add(this.labelSO_1);
+            this.groupBox2.Controls.Add(this.labelSO_0);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_4);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_4);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_3);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_3);
+            this.groupBox2.Controls.Add(this.checkBoxSO_0);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_2);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_2);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_1);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_1);
+            this.groupBox2.Controls.Add(this.textBoxParamSO_0);
+            this.groupBox2.Controls.Add(this.textBoxThreadsSO_0);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox2.Location = new System.Drawing.Point(59, 276);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox2.Size = new System.Drawing.Size(622, 264);
+            this.groupBox2.TabIndex = 72;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = " On SO Database ";
             // 
-            // textBox8
+            // checkBoxSO_6
             // 
-            this.textBox8.Location = new System.Drawing.Point(181, 225);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(81, 23);
-            this.textBox8.TabIndex = 41;
+            this.checkBoxSO_6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_6.Location = new System.Drawing.Point(24, 219);
+            this.checkBoxSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_6.Name = "checkBoxSO_6";
+            this.checkBoxSO_6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_6.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_6.TabIndex = 108;
+            this.checkBoxSO_6.Text = "Load Scenario #6";
+            this.checkBoxSO_6.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkBoxSO_5
             // 
-            this.checkBox4.Location = new System.Drawing.Point(29, 224);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(136, 24);
-            this.checkBox4.TabIndex = 40;
-            this.checkBox4.Text = "Load Scenario #3";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxSO_5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_5.Location = new System.Drawing.Point(24, 189);
+            this.checkBoxSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_5.Name = "checkBoxSO_5";
+            this.checkBoxSO_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_5.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_5.TabIndex = 107;
+            this.checkBoxSO_5.Text = "Load Scenario #5";
+            this.checkBoxSO_5.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // labelSO_6
             // 
-            this.checkBox3.Location = new System.Drawing.Point(29, 138);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(136, 24);
-            this.checkBox3.TabIndex = 39;
-            this.checkBox3.Text = "Load Scenario #0";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.labelSO_6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_6.Location = new System.Drawing.Point(421, 223);
+            this.labelSO_6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_6.Name = "labelSO_6";
+            this.labelSO_6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_6.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_6.TabIndex = 106;
+            this.labelSO_6.Text = "Param";
             // 
-            // textBox5
+            // labelSO_5
             // 
-            this.textBox5.Location = new System.Drawing.Point(275, 196);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(81, 23);
-            this.textBox5.TabIndex = 38;
+            this.labelSO_5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_5.Location = new System.Drawing.Point(421, 193);
+            this.labelSO_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_5.Name = "labelSO_5";
+            this.labelSO_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_5.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_5.TabIndex = 105;
+            this.labelSO_5.Text = "Param";
             // 
-            // textBox6
+            // textBoxParamSO_6
             // 
-            this.textBox6.Location = new System.Drawing.Point(181, 196);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(81, 23);
-            this.textBox6.TabIndex = 37;
+            this.textBoxParamSO_6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxParamSO_6.Enabled = false;
+            this.textBoxParamSO_6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_6.Location = new System.Drawing.Point(332, 216);
+            this.textBoxParamSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_6.Name = "textBoxParamSO_6";
+            this.textBoxParamSO_6.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_6.TabIndex = 104;
             // 
-            // checkBox2
+            // textBoxThreadsSO_6
             // 
-            this.checkBox2.Location = new System.Drawing.Point(29, 195);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(136, 24);
-            this.checkBox2.TabIndex = 36;
-            this.checkBox2.Text = "Load Scenario #2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.textBoxThreadsSO_6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_6.Location = new System.Drawing.Point(270, 216);
+            this.textBoxThreadsSO_6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_6.Name = "textBoxThreadsSO_6";
+            this.textBoxThreadsSO_6.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_6.TabIndex = 103;
             // 
-            // checkBox1
+            // textBoxParamSO_5
             // 
-            this.checkBox1.Location = new System.Drawing.Point(29, 166);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 24);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "Load Scenario #1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.textBoxParamSO_5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxParamSO_5.Enabled = false;
+            this.textBoxParamSO_5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_5.Location = new System.Drawing.Point(332, 186);
+            this.textBoxParamSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_5.Name = "textBoxParamSO_5";
+            this.textBoxParamSO_5.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_5.TabIndex = 102;
             // 
-            // textBox2
+            // textBoxThreadsSO_5
             // 
-            this.textBox2.Location = new System.Drawing.Point(275, 167);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(81, 23);
-            this.textBox2.TabIndex = 34;
+            this.textBoxThreadsSO_5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_5.Location = new System.Drawing.Point(270, 186);
+            this.textBoxThreadsSO_5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_5.Name = "textBoxThreadsSO_5";
+            this.textBoxThreadsSO_5.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_5.TabIndex = 101;
             // 
-            // textBox4
+            // checkBoxSO_4
             // 
-            this.textBox4.Location = new System.Drawing.Point(181, 167);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(81, 23);
-            this.textBox4.TabIndex = 33;
+            this.checkBoxSO_4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_4.Location = new System.Drawing.Point(24, 159);
+            this.checkBoxSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_4.Name = "checkBoxSO_4";
+            this.checkBoxSO_4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_4.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_4.TabIndex = 100;
+            this.checkBoxSO_4.Text = "Load Scenario #4";
+            this.checkBoxSO_4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSO_3
+            // 
+            this.checkBoxSO_3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_3.Location = new System.Drawing.Point(24, 130);
+            this.checkBoxSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_3.Name = "checkBoxSO_3";
+            this.checkBoxSO_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_3.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_3.TabIndex = 99;
+            this.checkBoxSO_3.Text = "Load Scenario #3";
+            this.checkBoxSO_3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSO_2
+            // 
+            this.checkBoxSO_2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_2.Location = new System.Drawing.Point(24, 102);
+            this.checkBoxSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_2.Name = "checkBoxSO_2";
+            this.checkBoxSO_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_2.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_2.TabIndex = 98;
+            this.checkBoxSO_2.Text = "Load Scenario #2";
+            this.checkBoxSO_2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSO_1
+            // 
+            this.checkBoxSO_1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_1.Location = new System.Drawing.Point(24, 72);
+            this.checkBoxSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_1.Name = "checkBoxSO_1";
+            this.checkBoxSO_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_1.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_1.TabIndex = 97;
+            this.checkBoxSO_1.Text = "Load Scenario #1";
+            this.checkBoxSO_1.UseVisualStyleBackColor = true;
+            // 
+            // labelSO_4
+            // 
+            this.labelSO_4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_4.Location = new System.Drawing.Point(421, 163);
+            this.labelSO_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_4.Name = "labelSO_4";
+            this.labelSO_4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_4.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_4.TabIndex = 95;
+            this.labelSO_4.Text = "Param";
+            // 
+            // labelSO_3
+            // 
+            this.labelSO_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_3.Location = new System.Drawing.Point(421, 134);
+            this.labelSO_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_3.Name = "labelSO_3";
+            this.labelSO_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_3.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_3.TabIndex = 94;
+            this.labelSO_3.Text = "Param";
+            // 
+            // labelSO_2
+            // 
+            this.labelSO_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_2.Location = new System.Drawing.Point(421, 105);
+            this.labelSO_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_2.Name = "labelSO_2";
+            this.labelSO_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_2.Size = new System.Drawing.Size(177, 23);
+            this.labelSO_2.TabIndex = 93;
+            this.labelSO_2.Text = "Param";
+            // 
+            // labelSO_1
+            // 
+            this.labelSO_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_1.Location = new System.Drawing.Point(421, 76);
+            this.labelSO_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_1.Name = "labelSO_1";
+            this.labelSO_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_1.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_1.TabIndex = 92;
+            this.labelSO_1.Text = "Param";
+            // 
+            // labelSO_0
+            // 
+            this.labelSO_0.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelSO_0.Location = new System.Drawing.Point(421, 44);
+            this.labelSO_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSO_0.Name = "labelSO_0";
+            this.labelSO_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelSO_0.Size = new System.Drawing.Size(192, 23);
+            this.labelSO_0.TabIndex = 91;
+            this.labelSO_0.Text = "Param";
+            // 
+            // textBoxParamSO_4
+            // 
+            this.textBoxParamSO_4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxParamSO_4.Enabled = false;
+            this.textBoxParamSO_4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_4.Location = new System.Drawing.Point(332, 156);
+            this.textBoxParamSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_4.Name = "textBoxParamSO_4";
+            this.textBoxParamSO_4.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_4.TabIndex = 86;
+            // 
+            // textBoxThreadsSO_4
+            // 
+            this.textBoxThreadsSO_4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_4.Location = new System.Drawing.Point(270, 156);
+            this.textBoxThreadsSO_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_4.Name = "textBoxThreadsSO_4";
+            this.textBoxThreadsSO_4.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_4.TabIndex = 85;
+            // 
+            // textBoxParamSO_3
+            // 
+            this.textBoxParamSO_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_3.Location = new System.Drawing.Point(332, 127);
+            this.textBoxParamSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_3.Name = "textBoxParamSO_3";
+            this.textBoxParamSO_3.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_3.TabIndex = 84;
+            // 
+            // textBoxThreadsSO_3
+            // 
+            this.textBoxThreadsSO_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_3.Location = new System.Drawing.Point(270, 127);
+            this.textBoxThreadsSO_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_3.Name = "textBoxThreadsSO_3";
+            this.textBoxThreadsSO_3.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_3.TabIndex = 83;
+            // 
+            // checkBoxSO_0
+            // 
+            this.checkBoxSO_0.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxSO_0.Location = new System.Drawing.Point(24, 43);
+            this.checkBoxSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxSO_0.Name = "checkBoxSO_0";
+            this.checkBoxSO_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxSO_0.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxSO_0.TabIndex = 79;
+            this.checkBoxSO_0.Text = "Load Scenario #0";
+            this.checkBoxSO_0.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParamSO_2
+            // 
+            this.textBoxParamSO_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_2.Location = new System.Drawing.Point(332, 98);
+            this.textBoxParamSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_2.Name = "textBoxParamSO_2";
+            this.textBoxParamSO_2.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_2.TabIndex = 78;
+            // 
+            // textBoxThreadsSO_2
+            // 
+            this.textBoxThreadsSO_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_2.Location = new System.Drawing.Point(270, 98);
+            this.textBoxThreadsSO_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_2.Name = "textBoxThreadsSO_2";
+            this.textBoxThreadsSO_2.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_2.TabIndex = 77;
+            // 
+            // textBoxParamSO_1
+            // 
+            this.textBoxParamSO_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_1.Location = new System.Drawing.Point(332, 69);
+            this.textBoxParamSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_1.Name = "textBoxParamSO_1";
+            this.textBoxParamSO_1.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_1.TabIndex = 74;
+            // 
+            // textBoxThreadsSO_1
+            // 
+            this.textBoxThreadsSO_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_1.Location = new System.Drawing.Point(270, 69);
+            this.textBoxThreadsSO_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_1.Name = "textBoxThreadsSO_1";
+            this.textBoxThreadsSO_1.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_1.TabIndex = 73;
+            // 
+            // textBoxParamSO_0
+            // 
+            this.textBoxParamSO_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamSO_0.Location = new System.Drawing.Point(332, 40);
+            this.textBoxParamSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamSO_0.Name = "textBoxParamSO_0";
+            this.textBoxParamSO_0.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamSO_0.TabIndex = 72;
+            // 
+            // textBoxThreadsSO_0
+            // 
+            this.textBoxThreadsSO_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsSO_0.Location = new System.Drawing.Point(270, 40);
+            this.textBoxThreadsSO_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsSO_0.Name = "textBoxThreadsSO_0";
+            this.textBoxThreadsSO_0.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsSO_0.TabIndex = 71;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelNH_3);
+            this.groupBox1.Controls.Add(this.labelNH_2);
+            this.groupBox1.Controls.Add(this.labelNH_1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.labelNH_0);
+            this.groupBox1.Controls.Add(this.textBoxParamNH_3);
+            this.groupBox1.Controls.Add(this.textBoxThreadsNH_3);
+            this.groupBox1.Controls.Add(this.checkBoxNH_3);
+            this.groupBox1.Controls.Add(this.checkBoxNH_0);
+            this.groupBox1.Controls.Add(this.textBoxParamNH_2);
+            this.groupBox1.Controls.Add(this.textBoxThreadsNH_2);
+            this.groupBox1.Controls.Add(this.checkBoxNH_2);
+            this.groupBox1.Controls.Add(this.checkBoxNH_1);
+            this.groupBox1.Controls.Add(this.textBoxParamNH_1);
+            this.groupBox1.Controls.Add(this.textBoxThreadsNH_1);
+            this.groupBox1.Controls.Add(this.textBoxParamNH_0);
+            this.groupBox1.Controls.Add(this.textBoxThreadsNH_0);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox1.Location = new System.Drawing.Point(59, 77);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox1.Size = new System.Drawing.Size(622, 193);
+            this.groupBox1.TabIndex = 71;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = " On Tests Database ";
+            // 
+            // labelNH_3
+            // 
+            this.labelNH_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelNH_3.Location = new System.Drawing.Point(421, 144);
+            this.labelNH_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNH_3.Name = "labelNH_3";
+            this.labelNH_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNH_3.Size = new System.Drawing.Size(192, 23);
+            this.labelNH_3.TabIndex = 67;
+            this.labelNH_3.Text = "Param";
+            // 
+            // labelNH_2
+            // 
+            this.labelNH_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelNH_2.Location = new System.Drawing.Point(421, 119);
+            this.labelNH_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNH_2.Name = "labelNH_2";
+            this.labelNH_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNH_2.Size = new System.Drawing.Size(177, 23);
+            this.labelNH_2.TabIndex = 66;
+            this.labelNH_2.Text = "Param";
+            // 
+            // labelNH_1
+            // 
+            this.labelNH_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelNH_1.Location = new System.Drawing.Point(421, 90);
+            this.labelNH_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNH_1.Name = "labelNH_1";
+            this.labelNH_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNH_1.Size = new System.Drawing.Size(177, 23);
+            this.labelNH_1.TabIndex = 65;
+            this.labelNH_1.Text = "Param";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(275, 107);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.Location = new System.Drawing.Point(344, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(130, 23);
-            this.label3.TabIndex = 31;
+            this.label3.TabIndex = 64;
             this.label3.Text = "Param";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(275, 138);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(81, 23);
-            this.textBox1.TabIndex = 30;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(181, 107);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Location = new System.Drawing.Point(270, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(130, 23);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "No of Threads";
+            this.label2.Size = new System.Drawing.Size(65, 23);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Threads";
+            // 
+            // labelNH_0
+            // 
+            this.labelNH_0.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelNH_0.Location = new System.Drawing.Point(421, 61);
+            this.labelNH_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNH_0.Name = "labelNH_0";
+            this.labelNH_0.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNH_0.Size = new System.Drawing.Size(192, 23);
+            this.labelNH_0.TabIndex = 59;
+            this.labelNH_0.Text = "Param";
+            // 
+            // textBoxParamNH_3
+            // 
+            this.textBoxParamNH_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamNH_3.Location = new System.Drawing.Point(332, 141);
+            this.textBoxParamNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamNH_3.Name = "textBoxParamNH_3";
+            this.textBoxParamNH_3.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamNH_3.TabIndex = 58;
+            // 
+            // textBoxThreadsNH_3
+            // 
+            this.textBoxThreadsNH_3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsNH_3.Location = new System.Drawing.Point(270, 141);
+            this.textBoxThreadsNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_3.Name = "textBoxThreadsNH_3";
+            this.textBoxThreadsNH_3.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsNH_3.TabIndex = 57;
+            // 
+            // checkBoxNH_3
+            // 
+            this.checkBoxNH_3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxNH_3.Location = new System.Drawing.Point(24, 143);
+            this.checkBoxNH_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxNH_3.Name = "checkBoxNH_3";
+            this.checkBoxNH_3.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxNH_3.TabIndex = 56;
+            this.checkBoxNH_3.Text = "Load Scenario #3";
+            this.checkBoxNH_3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNH_0
+            // 
+            this.checkBoxNH_0.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxNH_0.Location = new System.Drawing.Point(24, 57);
+            this.checkBoxNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxNH_0.Name = "checkBoxNH_0";
+            this.checkBoxNH_0.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxNH_0.TabIndex = 55;
+            this.checkBoxNH_0.Text = "Load Scenario #0";
+            this.checkBoxNH_0.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParamNH_2
+            // 
+            this.textBoxParamNH_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamNH_2.Location = new System.Drawing.Point(332, 112);
+            this.textBoxParamNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamNH_2.Name = "textBoxParamNH_2";
+            this.textBoxParamNH_2.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamNH_2.TabIndex = 54;
+            // 
+            // textBoxThreadsNH_2
+            // 
+            this.textBoxThreadsNH_2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsNH_2.Location = new System.Drawing.Point(270, 112);
+            this.textBoxThreadsNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_2.Name = "textBoxThreadsNH_2";
+            this.textBoxThreadsNH_2.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsNH_2.TabIndex = 53;
+            // 
+            // checkBoxNH_2
+            // 
+            this.checkBoxNH_2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxNH_2.Location = new System.Drawing.Point(24, 114);
+            this.checkBoxNH_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxNH_2.Name = "checkBoxNH_2";
+            this.checkBoxNH_2.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxNH_2.TabIndex = 52;
+            this.checkBoxNH_2.Text = "Load Scenario #2";
+            this.checkBoxNH_2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNH_1
+            // 
+            this.checkBoxNH_1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBoxNH_1.Location = new System.Drawing.Point(24, 87);
+            this.checkBoxNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBoxNH_1.Name = "checkBoxNH_1";
+            this.checkBoxNH_1.Size = new System.Drawing.Size(238, 24);
+            this.checkBoxNH_1.TabIndex = 51;
+            this.checkBoxNH_1.Text = "Load Scenario #1";
+            this.checkBoxNH_1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParamNH_1
+            // 
+            this.textBoxParamNH_1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBoxParamNH_1.Enabled = false;
+            this.textBoxParamNH_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamNH_1.Location = new System.Drawing.Point(332, 83);
+            this.textBoxParamNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamNH_1.Name = "textBoxParamNH_1";
+            this.textBoxParamNH_1.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamNH_1.TabIndex = 50;
+            // 
+            // textBoxThreadsNH_1
+            // 
+            this.textBoxThreadsNH_1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsNH_1.Location = new System.Drawing.Point(270, 83);
+            this.textBoxThreadsNH_1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_1.Name = "textBoxThreadsNH_1";
+            this.textBoxThreadsNH_1.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsNH_1.TabIndex = 49;
+            // 
+            // textBoxParamNH_0
+            // 
+            this.textBoxParamNH_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxParamNH_0.Location = new System.Drawing.Point(332, 54);
+            this.textBoxParamNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxParamNH_0.Name = "textBoxParamNH_0";
+            this.textBoxParamNH_0.Size = new System.Drawing.Size(81, 27);
+            this.textBoxParamNH_0.TabIndex = 48;
+            // 
+            // textBoxThreadsNH_0
+            // 
+            this.textBoxThreadsNH_0.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.textBoxThreadsNH_0.Location = new System.Drawing.Point(270, 54);
+            this.textBoxThreadsNH_0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxThreadsNH_0.Name = "textBoxThreadsNH_0";
+            this.textBoxThreadsNH_0.Size = new System.Drawing.Size(54, 27);
+            this.textBoxThreadsNH_0.TabIndex = 47;
             // 
             // label8
             // 
@@ -466,22 +975,14 @@
             this.GoButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.GoButton.ForeColor = System.Drawing.Color.Black;
-            this.GoButton.Location = new System.Drawing.Point(226, 303);
+            this.GoButton.Location = new System.Drawing.Point(217, 560);
             this.GoButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(130, 81);
+            this.GoButton.Size = new System.Drawing.Size(304, 57);
             this.GoButton.TabIndex = 9;
             this.GoButton.Text = "Go";
             this.GoButton.UseVisualStyleBackColor = false;
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(181, 138);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(81, 23);
-            this.textBox3.TabIndex = 5;
             // 
             // Form1
             // 
@@ -490,7 +991,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (13)))), ((int) (((byte) (13)))),
                 ((int) (((byte) (55)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(811, 660);
+            this.ClientSize = new System.Drawing.Size(941, 668);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -498,7 +999,6 @@
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -507,6 +1007,10 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
 
@@ -530,23 +1034,57 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button asyncButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button GoButton;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label labelNH_1;
+        private System.Windows.Forms.Label labelNH_2;
+        private System.Windows.Forms.Label labelNH_3;
+        private System.Windows.Forms.CheckBox checkBoxSO_1;
+        private System.Windows.Forms.CheckBox checkBoxNH_1;
+        private System.Windows.Forms.CheckBox checkBoxNH_2;
+        private System.Windows.Forms.CheckBox checkBoxNH_0;
+        private System.Windows.Forms.CheckBox checkBoxNH_3;
+        private System.Windows.Forms.Label labelNH_0;
+        private System.Windows.Forms.CheckBox checkBoxSO_0;
+        private System.Windows.Forms.CheckBox checkBoxSO_4;
+        private System.Windows.Forms.CheckBox checkBoxSO_3;
+        private System.Windows.Forms.CheckBox checkBoxSO_2;
+        private System.Windows.Forms.CheckBox checkBoxSO_6;
+        private System.Windows.Forms.CheckBox checkBoxSO_5;
+        private System.Windows.Forms.Label labelSO_6;
+        private System.Windows.Forms.Label labelSO_5;
+        private System.Windows.Forms.Label labelSO_3;
+        private System.Windows.Forms.Label labelSO_4;
+        private System.Windows.Forms.Label labelSO_0;
+        private System.Windows.Forms.Label labelSO_1;
+        private System.Windows.Forms.Label labelSO_2;
+        private System.Windows.Forms.TextBox textBoxThreadsNH_0;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_1;
+        private System.Windows.Forms.TextBox textBoxParamNH_3;
+        private System.Windows.Forms.TextBox textBoxThreadsNH_3;
+        private System.Windows.Forms.TextBox textBoxParamNH_2;
+        private System.Windows.Forms.TextBox textBoxThreadsNH_2;
+        private System.Windows.Forms.TextBox textBoxThreadsNH_1;
+        private System.Windows.Forms.TextBox textBoxParamNH_1;
+        private System.Windows.Forms.TextBox textBoxParamNH_0;
+        private System.Windows.Forms.TextBox textBoxParamSO_6;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_6;
+        private System.Windows.Forms.TextBox textBoxParamSO_5;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_5;
+        private System.Windows.Forms.TextBox textBoxParamSO_4;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_4;
+        private System.Windows.Forms.TextBox textBoxParamSO_3;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_3;
+        private System.Windows.Forms.TextBox textBoxParamSO_2;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_2;
+        private System.Windows.Forms.TextBox textBoxParamSO_1;
+        private System.Windows.Forms.TextBox textBoxParamSO_0;
+        private System.Windows.Forms.TextBox textBoxThreadsSO_0;
     }
 }
 

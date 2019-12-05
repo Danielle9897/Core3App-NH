@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="TestProfilerWithCore3"
+				   namespace="TestProfilerWithCore3.ModelSO">
+	<class name="VoteSO" table="Votes">
+		<id name="Id"><generator class="identity"/></id>
+		<property name="PostId"/>
+		<property name="UserId"/>
+		<property name="BountyAmount"/>
+		<property name="VoteTypeId"/>
+		<property name="CreationDate"/>
+	</class>
+</hibernate-mapping>

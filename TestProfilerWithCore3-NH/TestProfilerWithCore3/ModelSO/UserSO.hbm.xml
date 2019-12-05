@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="TestProfilerWithCore3"
+				   namespace="TestProfilerWithCore3.ModelSO">
+	<class name="UserSO" table="Users">
+		<id name="Id"><generator class="identity"/></id>
+		<property name="AboutMe"/>
+		<property name="Age"/>
+		<property name="CreationDate"/>
+		<property name="DisplayName"/>
+		<property name="DownVotes"/>		
+		<property name="EmailHash"/>		
+		<property name="LastAccessDate"/>		
+		<property name="Location"/>		
+		<property name="Reputation"/>		
+		<property name="UpVotes"/>		
+		<property name="Views"/>		
+		<property name="WebsiteUrl"/>		
+		<property name="AccountId"/>		
+	</class>
+</hibernate-mapping>
