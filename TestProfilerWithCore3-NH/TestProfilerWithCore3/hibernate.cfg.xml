@@ -9,19 +9,19 @@
         <property name="connection.driver_class">
             NHibernate.Driver.SqlClientDriver</property>
         
-<!--    => Note: the connection string property is overriden within each scenario -->
-        
-<!--    <property name="connection.connection_string">-->
-<!--        server=.\sqlexpress;-->
-<!--        database=HibernatingRhinos.Profiler.IntegrationTests;-->
-<!--        trusted_connection=True;-->
-<!--    </property>-->
+<!--    => Note: For the Load scenarioes: The connection string is overriden within each scenario -->        
         
         <property name="connection.connection_string">
             server=.\sqlexpress;
-            database=StackOverflow2010;
+            database=HibernatingRhinos.Profiler.IntegrationTests;
             trusted_connection=True;
         </property>
+        
+<!--        <property name="connection.connection_string">-->
+<!--            server=.\sqlexpress;-->
+<!--            database=StackOverflow2010;-->
+<!--            trusted_connection=True;-->
+<!--        </property>-->
         
     </session-factory>
 </hibernate-configuration>

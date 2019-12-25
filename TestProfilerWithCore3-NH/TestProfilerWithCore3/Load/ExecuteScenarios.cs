@@ -28,7 +28,7 @@ namespace TestProfilerWithCore3.Load
                 }
                 
                 await Task.WhenAll(itemsToRun.ToArray());
-                Console.WriteLine("******* done *******"); // todo : why is this sometimes printed before all are done ?
+                Console.WriteLine("******* done *******");
             }
             catch(Exception e)
             {
